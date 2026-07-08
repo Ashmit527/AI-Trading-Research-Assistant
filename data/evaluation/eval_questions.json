@@ -1,0 +1,177 @@
+[
+  {
+    "id": 1,
+    "question": "What was Tata Motors' consolidated revenue from operations in FY26?",
+    "expected_answer": "Tata Motors reported consolidated revenue from operations of ₹83,855 crore in FY26.",
+    "company": "tatamotors_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 2,
+    "question": "What was Tata Motors' consolidated profit for the year in FY26?",
+    "expected_answer": "Tata Motors reported consolidated profit for the year of ₹3,030 crore in FY26.",
+    "company": "tatamotors_ar25",
+    "type": "financial"
+  },
+  {
+    "id": 3,
+    "question": "What final dividend did Tata Motors' Board recommend for FY26?",
+    "expected_answer": "The Board recommended a final dividend of ₹4 per equity share of face value ₹2 each, equal to 200%, for FY26.",
+    "company": "tatamotors_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 4,
+    "question": "What cybersecurity risks does Tata Motors identify for its IT systems and connected vehicles?",
+    "expected_answer": "Tata Motors identifies ransomware, data exfiltration, targeted cyber intrusions, system availability issues, data integrity and confidentiality risks, production disruption, vehicle delivery delays, revenue loss, and connected vehicle platform data breaches as key cybersecurity risks.",
+    "company": "tatamotors_ar25",
+    "type": "narrative"
+  },
+  {
+    "id": 5,
+    "question": "What percentage of renewable electricity did Tata Motors report for its India operations in FY26 highlights?",
+    "expected_answer": "Tata Motors reported 51% renewable electricity in its India operations.",
+    "company": "tatamotors_ar25",
+    "type": "esg"
+  },
+  {
+    "id": 6,
+    "question": "What were Reliance Industries' consolidated revenues, EBITDA, and net profit for FY 2025-26?",
+    "expected_answer": "Reliance Industries reported consolidated revenues of ₹11,75,919 crore, EBITDA of ₹2,07,911 crore, and net profit of ₹95,754 crore for FY 2025-26.",
+    "company": "rel_ar25",
+    "type": "financial"
+  },
+  {
+    "id": 7,
+    "question": "What was Reliance Industries' consolidated net debt as of March 31, 2026?",
+    "expected_answer": "Reliance Industries' consolidated net debt stood at ₹1,24,717 crore as of March 31, 2026.",
+    "company": "rel_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 8,
+    "question": "How did Reliance's Digital Services business perform in FY 2025-26?",
+    "expected_answer": "Digital Services reported revenue from operations of ₹1,49,965 crore, EBITDA of ₹76,560 crore, and an EBITDA margin of 51.1%. EBITDA grew 17.8% year-on-year.",
+    "company": "rel_ar25",
+    "type": "segment"
+  },
+  {
+    "id": 9,
+    "question": "What customer milestones did Jio report as of March 2026?",
+    "expected_answer": "As of March 2026, Jio had over 524 million total customers, including more than 268 million 5G users and over 27 million fixed broadband connections.",
+    "company": "rel_ar25",
+    "type": "operational"
+  },
+  {
+    "id": 10,
+    "question": "What dividend did Reliance Industries' Board recommend for FY 2025-26?",
+    "expected_answer": "The Board recommended a dividend of ₹6 per fully paid-up equity share of ₹10 each for FY 2025-26, aggregating ₹8,119 crore.",
+    "company": "rel_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 11,
+    "question": "What consolidated portfolio revenue, adjusted EBITDA, and PAT are reported in the Adani annual report for FY 2025-26?",
+    "expected_answer": "The report states consolidated portfolio revenue of ₹2,91,742 crore, consolidated adjusted EBITDA of ₹94,833 crore, and consolidated PAT of ₹46,377 crore for FY 2025-26.",
+    "company": "adani_ar25",
+    "type": "financial"
+  },
+  {
+    "id": 12,
+    "question": "What net debt to EBITDA ratio did the Adani report disclose as of March 31, 2026?",
+    "expected_answer": "The report disclosed a net debt/EBITDA ratio of 3.32x, below the guided 3.5x leverage range.",
+    "company": "adani_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 13,
+    "question": "What major airport milestones are mentioned in the Adani report?",
+    "expected_answer": "The report mentions the opening of Navi Mumbai International Airport and the new integrated terminal building at Guwahati Airport, both inaugurated by the Prime Minister, with Navi Mumbai operations commencing in December 2025.",
+    "company": "adani_ar25",
+    "type": "operational"
+  },
+  {
+    "id": 14,
+    "question": "How does the Adani report describe its enterprise risk management framework?",
+    "expected_answer": "It describes a structured ERM framework based on ISO 31000:2018 and the COSO framework, used to identify, assess, mitigate, and monitor risks across strategic, tactical, and operational categories, supported by a central risk register and continuous monitoring.",
+    "company": "adani_ar25",
+    "type": "narrative"
+  },
+  {
+    "id": 15,
+    "question": "What mitigation actions are listed for commodity price risk in the Adani report?",
+    "expected_answer": "Mitigations include having over half of installed capacity domestic coal-based, more than 90% of that capacity tied under PPAs, escalation and tariff revision mechanisms for fuel cost recovery, pre-monsoon domestic coal procurement, and captive mine development for long-term fuel security.",
+    "company": "adani_ar25",
+    "type": "risk"
+  },
+  {
+    "id": 16,
+    "question": "What was SBI's standalone net profit in FY2025 and how much did it grow year-on-year?",
+    "expected_answer": "SBI's standalone net profit grew 16.08% to ₹70,901 crore in FY2025, compared with ₹61,077 crore in FY2024.",
+    "company": "sbi_ar25",
+    "type": "financial"
+  },
+  {
+    "id": 17,
+    "question": "What were SBI's gross NPA and net NPA ratios at the end of FY2025?",
+    "expected_answer": "SBI's gross NPA ratio was 1.82% and net NPA ratio was 0.47% at the end of FY2025.",
+    "company": "sbi_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 18,
+    "question": "What dividend did SBI declare for FY2025?",
+    "expected_answer": "SBI declared a dividend of ₹15.90 per equity share for the financial year ended March 31, 2025.",
+    "company": "sbi_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 19,
+    "question": "What risks does SBI identify as inherent to banking business in its risk management overview?",
+    "expected_answer": "SBI identifies credit risk, market risk, liquidity risk, and operational risk, including IT risk and third-party risk, as major inherent banking risks.",
+    "company": "sbi_ar25",
+    "type": "risk"
+  },
+  {
+    "id": 20,
+    "question": "What initiatives does SBI describe for cyber fraud awareness and customer protection?",
+    "expected_answer": "SBI describes customer onboarding cyber-risk communication, flyers and leaflets on cybercrime and safe practices, media campaigns, reporting guidance through helpline 1930 and cybercrime.gov.in, the 'Fight Against Cyber Frauds' awareness programme, cyber safety displays at branches, videos on digital displays, and special townhall meetings at 158 cyber fraud propensity branches.",
+    "company": "sbi_ar25",
+    "type": "narrative"
+  },
+  {
+    "id": 21,
+    "question": "What were Infosys' revenues and net profit in FY 2026?",
+    "expected_answer": "Infosys reported revenues of ₹1,78,650 crore and net profit attributable to owners of ₹29,440 crore in FY 2026.",
+    "company": "inf_ar25",
+    "type": "financial"
+  },
+  {
+    "id": 22,
+    "question": "What total dividend per share did Infosys announce for fiscal 2026?",
+    "expected_answer": "Infosys announced a total dividend of ₹48 per share for fiscal 2026, made up of an interim dividend of ₹23 and a final dividend of ₹25 per share.",
+    "company": "inf_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 23,
+    "question": "How many employees and active clients did Infosys report as of FY 2026?",
+    "expected_answer": "Infosys reported 3,28,594 total employees and 1,965 total active clients.",
+    "company": "inf_ar25",
+    "type": "factual"
+  },
+  {
+    "id": 24,
+    "question": "What cybersecurity governance and controls does Infosys describe?",
+    "expected_answer": "Infosys has a Cybersecurity Risk Sub-Committee of the Risk Management Committee made up only of independent directors. It monitors global cybersecurity events, maintains ISO 27001:2022 certification, has SSAE 18 and ISAE 3402 SOC 1 and SOC 2 attestations, and focuses on workforce training, AI/ML security, cyber resiliency, secure supply chains, and developer security resources.",
+    "company": "inf_ar25",
+    "type": "narrative"
+  },
+  {
+    "id": 25,
+    "question": "What does Infosys report about the McCamish cybersecurity incident?",
+    "expected_answer": "Infosys reports that in November 2023 certain systems of Infosys McCamish Systems LLC were encrypted by ransomware, causing non-availability of some applications and systems. McCamish initiated incident response, engaged cybersecurity specialists, substantially remediated and restored affected systems by December 31, 2023, and identified corporate customers and individuals whose information was subject to unauthorized access and exfiltration.",
+    "company": "inf_ar25",
+    "type": "risk"
+  }
+]

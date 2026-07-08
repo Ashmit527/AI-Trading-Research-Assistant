@@ -32,7 +32,7 @@ def search(query, k=5):
 
 
 if __name__ == "__main__":
-    test_query = "What is the company's digital transformation strategy?"
+    test_query = "What is the turnover of infosys?"
     
     results = search(test_query, k=5)
     
