@@ -23,7 +23,8 @@ def run_evaluation(eval_path, output_path):
             # You'll fill these in manually after reviewing:
             "retrieval_correct": None,   # Did it retrieve the right chunk(s)?
             "answer_correct": None,      # Was the generated answer factually right?
-            "citation_correct": None     # Were source numbers/pages attributed correctly?
+            "citation_correct": None,    # Were source numbers/pages attributed correctly?
+            "model_declined_to_answer": None   # NEW: True if model said "not enough info" / "don't know"
         })
         print(f"  Answer: {answer[:150]}...")
 

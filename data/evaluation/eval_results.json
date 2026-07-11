@@ -3,7 +3,7 @@
     "id": 1,
     "question": "What was Tata Motors' consolidated revenue from operations in FY26?",
     "expected_answer": "Tata Motors reported consolidated revenue from operations of ₹83,855 crore in FY26.",
-    "generated_answer": "According to [Source 2 - tatamotors_ar25, page 118], the standalone revenue from operations for FY26 was ₹83,855 crore.",
+    "generated_answer": "According to [Source 1 - tatamotors_ar25, page 6] and [Source 2 - tatamotors_ar25, page 118], the correct information is provided by Source 1.\n\nTata Motors' consolidated revenue from operations in FY26 was H83,855 crore.",
     "sources_retrieved": [
       "tatamotors_ar25 p.6",
       "tatamotors_ar25 p.118",
@@ -14,13 +14,14 @@
     "type": "factual",
     "retrieval_correct": true,
     "answer_correct": true,
-    "citation_correct": true
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 2,
     "question": "What was Tata Motors' consolidated profit for the year in FY26?",
     "expected_answer": "Tata Motors reported consolidated profit for the year of ₹3,030 crore in FY26.",
-    "generated_answer": "According to Source 1, page 118, under \"FINANCIAL HIGHLIGHTS\", it is stated that:\n\n\"Profit before tax 4,982 crore\"\n\nHowever, this is a subtotal. To find the consolidated profit for the year, we need to look at the total comprehensive income for the year.\n\nAccording to Source 1, page 118, under \"Total comprehensive income for the year/period\", it states:\n\n\"3,215\"\n\nThis includes shareholding of equity and other comprehensive income (loss). \n\nHowever, to find the consolidated profit for the year, we also need to subtract the tax expenses.",
+    "generated_answer": "According to Source 1, page 118, the profit before tax for the year is H4,982 crore and then adjusting for exceptional items, the profit before tax becomes H4,682. However, I can also confirm this answer through other sources as well.\n\nMore precisely, the Consolidated Profit for the Year in FY26 was: \nH3,030 crore",
     "sources_retrieved": [
       "tatamotors_ar25 p.118",
       "tatamotors_ar25 p.6",
@@ -30,14 +31,15 @@
     ],
     "type": "financial",
     "retrieval_correct": true,
-    "answer_correct": false,
-    "citation_correct": true
+    "answer_correct": true,
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 3,
     "question": "What final dividend did Tata Motors' Board recommend for FY26?",
     "expected_answer": "The Board recommended a final dividend of ₹4 per equity share of face value ₹2 each, equal to 200%, for FY26.",
-    "generated_answer": "The Tata Motors' Board recommended a final dividend of H4/- per Equity share (200%) for FY26.",
+    "generated_answer": "The Tata Motors' Board recommended a final dividend of ₹4/- per Equity share fully paid-up, amounting to ₹2/- per share (200%) for FY26.",
     "sources_retrieved": [
       "tatamotors_ar25 p.6",
       "tatamotors_ar25 p.121",
@@ -47,14 +49,15 @@
     ],
     "type": "factual",
     "retrieval_correct": true,
-    "answer_correct": true,
-    "citation_correct": true
+    "answer_correct": false,
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 4,
     "question": "What cybersecurity risks does Tata Motors identify for its IT systems and connected vehicles?",
     "expected_answer": "Tata Motors identifies ransomware, data exfiltration, targeted cyber intrusions, system availability issues, data integrity and confidentiality risks, production disruption, vehicle delivery delays, revenue loss, and connected vehicle platform data breaches as key cybersecurity risks.",
-    "generated_answer": "[Source 3 - tatamotors_ar25, page 44]\n\nTata Motors identifies the following cybersecurity risks for its IT systems:\n\n1. Unauthorised access to sensitive fleet data.\n2. Misuse of significant volumes of operational data.\n3. Ransomware attacks and cybercrime.\n4. Cyber-attacks and data exfiltration.\n5. Firmwire injection in vehicle systems, which could result in a serious breach of customer trust.\n\nAdditionally, Tata Motors also identifies the following risks due to the evolving regulatory landscape:\n\n1. Unauthorised access to personal data related to connected features.\n2. Breach of GDPR principles by foreign entities (non-Indian).\n3. Failure to comply with DPDP Rules and Digital Personal Data Protection Act.\n\nTata Motors takes proactive measures to mitigate these risks, including implementing a comprehensive cybersecurity framework, conducting regular audits and security testing, and collaborating with industry experts to identify and remediate vulnerabilities.",
+    "generated_answer": "According to [Source 3 - tatamotors_ar25, page 44], Tata Motors identifies the following cybersecurity risks for its IT systems and connected vehicles:\n\n1. Information risk and cybersecurity.\n2. Unauthorised access and misuse of data.\n3. Cybercrime, including ransomware attacks, cyber intrusion, and data exfiltration.\n\nAdditionally, the report highlights that the company's IT infrastructure is vulnerable to significant production disruptions, revenue loss, and direct vulnerabilities due to unauthorised access or exfiltration of data related to connected vehicle platforms.",
     "sources_retrieved": [
       "tatamotors_ar25 p.116",
       "tatamotors_ar25 p.203",
@@ -65,13 +68,14 @@
     "type": "narrative",
     "retrieval_correct": true,
     "answer_correct": true,
-    "citation_correct": true
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 5,
     "question": "What percentage of renewable electricity did Tata Motors report for its India operations in FY26 highlights?",
     "expected_answer": "Tata Motors reported 51% renewable electricity in its India operations.",
-    "generated_answer": "Tata Motors reported that Renewable Electricity was at 51% in FY26.",
+    "generated_answer": "According to Source 1 - tatamotors_ar25, page 51%, Renewable Electricity in Tata CSR Beneficiaries. However, this is not a direct answer to the question.\n\nLooking at Source 2 - tatamotors_ar25, page 59, we see that the company has continued to decouple growth from environmental footprint, with year-on-year improvements in intensity across key Levers driving its parameters of energy, emissions, water and waste. \n\nAdditionally, it reports \"Renewable Electricity Share#\" as 51% in FY26, which suggests that the company generates a significant portion of its electricity from renewable sources.\n\nTherefore, based on Source 2, we can conclude that Tata Motors reported approximately 51% of renewable electricity for its India operations in FY26.",
     "sources_retrieved": [
       "tatamotors_ar25 p.6",
       "tatamotors_ar25 p.59",
@@ -82,13 +86,14 @@
     "type": "esg",
     "retrieval_correct": true,
     "answer_correct": true,
-    "citation_correct": true
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 6,
     "question": "What were Reliance Industries' consolidated revenues, EBITDA, and net profit for FY 2025-26?",
     "expected_answer": "Reliance Industries reported consolidated revenues of ₹11,75,919 crore, EBITDA of ₹2,07,911 crore, and net profit of ₹95,754 crore for FY 2025-26.",
-    "generated_answer": "According to Source 1 - rel_ar25, page 42:\n\n* Consolidated revenue is not explicitly stated. However, the company's total value added statement lists \"Retail Revenue\" as ` J3,71,085 Crore and \"Digital Services Revenue\" as ` US$ 18.6 Billion.\n* EBITDA (Value Added) is ` J76,560 Crore for FY 2025-26.\n* Profit After Tax for FY 2025-26 was not directly stated in the provided sources.\n\nNote: The sources do not provide direct information on consolidated revenues and net profit for FY 2025-26.",
+    "generated_answer": "Based on the provided sources, I can answer the question as follows:\n\n* Consolidated Revenues for FY 2025-26: \nNo specific information is given in Source 1 about Reliance Industries' consolidated revenues. However, according to Source 4, Revenue from Operations was `176,164 Crore.\n \n\n* EBITDA for FY 2025-26:\nAccording to Source 1, EBITDA Value Added is defined as the value created by the activities of a business and its employees. J27,034 Crore of a business and its employees. However, no specific information about consolidated EBITDA can be found in this source.\n \n* Net Profit for FY 2025-26:\nNo specific information is given in Source 1 about Reliance Industries' net profit.",
     "sources_retrieved": [
       "rel_ar25 p.42",
       "rel_ar25 p.168",
@@ -97,15 +102,16 @@
       "tatamotors_ar25 p.218"
     ],
     "type": "financial",
-    "retrieval_correct": true,
+    "retrieval_correct": false,
     "answer_correct": false,
-    "citation_correct": true
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 7,
     "question": "What was Reliance Industries' consolidated net debt as of March 31, 2026?",
     "expected_answer": "Reliance Industries' consolidated net debt stood at ₹1,24,717 crore as of March 31, 2026.",
-    "generated_answer": "Unfortunately, the provided sources do not contain enough information to determine Reliance Industries' consolidated net debt as of March 31, 2026.\n\nHowever, according to [Source 1 - rel_ar25, page 113], \"Other Financial Liabilities – Current\" is listed as ₹43,311 and \"Unclaimed Dividends#\" is listed as ₹184. The total amount for \"Other Payables*\" is also listed at ₹41,456.\n\nAdditionally, [Source 3 - rel_ar25, page 121] lists several amounts related to loans and advances, deposits given, and other liabilities under the subheading \"Loans and Advances\". These amounts include:\n\n- Reliance Lithium Werks USA LLC: ₹18\n- Subsidiary Reliance New Energy Battery Storage Limited: ₹2\n- Reliance 4IR Realty Development Limited: ₹1,906\n\nHowever, without more information or context about these liabilities, it is difficult to determine the consolidated net debt of Reliance Industries as of March 31, 2026.\n\nTherefore, I must conclude that the provided sources do not contain enough information to answer this question accurately.",
+    "generated_answer": "According to Source 4 [Source 4 - rel_ar25, page 150], under the subheading \"B. No. beginning of the year shares during the year\", it mentions:\n\n\"Total 80,52,020 80,52,020.00 1,61,04,040 0.12\"\n\nHowever, this information is not relevant to net debt.\n\nSource 4 does not provide information on consolidated net debt.",
     "sources_retrieved": [
       "rel_ar25 p.113",
       "rel_ar25 p.107",
@@ -116,13 +122,14 @@
     "type": "factual",
     "retrieval_correct": false,
     "answer_correct": false,
-    "citation_correct": true
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 8,
     "question": "How did Reliance's Digital Services business perform in FY 2025-26?",
     "expected_answer": "Digital Services reported revenue from operations of ₹1,49,965 crore, EBITDA of ₹76,560 crore, and an EBITDA margin of 51.1%. EBITDA grew 17.8% year-on-year.",
-    "generated_answer": "According to the text, Reliance's Digital Services business performed as follows in FY 2025-26:\n\n* Revenue from Operations: ₹1,49,965 crore\n* EBITDA: ₹76,560 crore\n* EBITDA margin: 51.1%\n* Growth Y-o-Y: 14.3% for Revenue from Operations and 17.8% for EBITDA\n\nOverall, the Digital Services business achieved significant growth in revenue and EBITDA, driven by healthy subscriber addition, ARPU growth, and scale-up of phygital distribution capabilities across the country.",
+    "generated_answer": "According to the text, Reliance's Digital Services business performed as follows:\n\n* Revenue from Operations grew by 14.3% year-over-year (Y-o-Y) to ₹1,49,965 crore.\n* EBITDA growth for the Digital Services business was 17.8% Y-o-Y.\n* The EBITDA margin improved by 160 basis points to 51.1%.\n* Customer engagement on the Jio network remained robust, with a subscriber base of over 524 million as of March 2026.\n\nOverall, the performance suggests that Reliance's Digital Services business is growing rapidly and delivering strong financial results.",
     "sources_retrieved": [
       "rel_ar25 p.42",
       "rel_ar25 p.121",
@@ -133,13 +140,14 @@
     "type": "segment",
     "retrieval_correct": true,
     "answer_correct": true,
-    "citation_correct": true
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 9,
     "question": "What customer milestones did Jio report as of March 2026?",
     "expected_answer": "As of March 2026, Jio had over 524 million total customers, including more than 268 million 5G users and over 27 million fixed broadband connections.",
-    "generated_answer": "The text does not explicitly state the customer milestones achieved by Jio as of March 2026. However, it does mention that:\n\n* Under Shri Akash M. Ambani's leadership, Jio crossed the 100 million subscriber mark in less than six months of its launch in 2016.\n* As of March 31, 2026, Jio reported having 524 million customers.\n\nThese are mentioned as past achievements and not as current customer milestones as of March 2026.",
+    "generated_answer": "The provided text does not mention any specific customer milestones reported by Jio. However, it mentions that under Shri Akash M. Ambani's leadership, Jio crossed the 100 million subscriber mark in less than six months of its launch in 2016, and today serves over 524 million customers.",
     "sources_retrieved": [
       "rel_ar25 p.160",
       "rel_ar25 p.49",
@@ -149,14 +157,15 @@
     ],
     "type": "operational",
     "retrieval_correct": true,
-    "answer_correct": true,
-    "citation_correct": true
+    "answer_correct": false,
+    "citation_correct": true,
+    "model_declined_to_answer": true
   },
   {
     "id": 10,
     "question": "What dividend did Reliance Industries' Board recommend for FY 2025-26?",
     "expected_answer": "The Board recommended a dividend of ₹6 per fully paid-up equity share of ₹10 each for FY 2025-26, aggregating ₹8,119 crore.",
-    "generated_answer": "The text does not explicitly mention the dividend that the Board of Directors of Reliance Industries recommended for FY 2025-26. However, it is mentioned that there are no outstanding deposits within the meaning of Regulation 43A of the SEBI Listing Regulations, and since the Company has not declared dividend since its incorporation, there are no unclaimed dividends.\n\nBut it does mention that the Board approved the sub-division/split of the existing shares of `100 each fully paid-up preference shares of `1,00,000 face value aggregating to `7,500 crore for distribution as dividend, and the dividend was `4,15,862.07 per share aggregating to `415.86 crores.\n\nThus, it can be inferred that the recommended dividend is not explicitly stated but the board approved a total of ` 4,15,862.07 per share aggregating to ` 415.86 crores for distribution as dividend.",
+    "generated_answer": "The answer is not explicitly mentioned in the text snippet provided. However, it can be inferred that there was no recommendation or approval of a dividend payment by the Board of Directors of Reliance Industries Limited (RIL) for FY 2025-26, as stated in the Dividend Distribution Policy: \"The Company has not declared dividend since its incorporation and hence, there are no outstanding unclaimed dividends.\"",
     "sources_retrieved": [
       "rel_ar25 p.80",
       "tatamotors_ar25 p.119",
@@ -167,13 +176,14 @@
     "type": "factual",
     "retrieval_correct": false,
     "answer_correct": false,
-    "citation_correct": true
+    "citation_correct": false,
+    "model_declined_to_answer": false
   },
   {
     "id": 11,
     "question": "What consolidated portfolio revenue, adjusted EBITDA, and PAT are reported in the Adani annual report for FY 2025-26?",
     "expected_answer": "The report states consolidated portfolio revenue of ₹2,91,742 crore, consolidated adjusted EBITDA of ₹94,833 crore, and consolidated PAT of ₹46,377 crore for FY 2025-26.",
-    "generated_answer": "Unfortunately, the provided text is an excerpt from the Adani Power Limited's Integrated Annual Report 2025-26, but it does not contain specific data on consolidated portfolio revenue, adjusted EBITDA, and PAT for FY 2025-26.\n\nHowever, based on my research, I can provide some general information about Adani Power Limited's financial performance. Please note that this is not a direct answer to the question, as the actual values are not provided in the excerpt.\n\nAccording to Adani Power Limited's Integrated Annual Report 2025-26, the Company reported:\n\n* Consolidated Revenue: ₹2,175.73 crore (up 23.35% from FY 2024-25)\n* Adjusted EBITDA: ₹1,542.65 crore (down 7.14% from FY 2024-25)\n* Profit After Tax (PAT): ₹1,136.15 crore (up 30.37% from FY 2024-25)\n\nPlease note that these values are subject to change and might not reflect the current financial performance of Adani Power Limited. For the most up-to-date information, please refer to the Company's latest annual report or other reliable sources.",
+    "generated_answer": "The problem statement does not provide specific information on the consolidated portfolio revenue, adjusted EBITDA, and PAT for FY 2025-26. However, I can help you find this information by referring to the Adani Power Limited Integrated Annual Report 2025-26.\n\nAccording to the report, the Consolidated Portfolio Revenue for FY 2025-26 is:\n\n` 2,211.97 crore\n\nAdjusted EBITDA (Earnings Before Interest, Taxes, Depreciation, and Amortization) is not explicitly mentioned in the report.\n\nHowever, the Reportable Segment Profit (PAT) is reported as follows:\n\n- Thermal Power Generation: ` 1,168.53 crore\n- Renewable Energy: ` 343.89 crore\n- Other Segments: ` 799.55 crore\n\nNote that these figures are not the same as Consolidated Portfolio Revenue and Adjusted EBITDA.\n\nTo get the Adjusted EBITDA figure, you may need to refer to the detailed financial statements or other sections of the report that provide more information on this metric.\n\nSimilarly, PAT is reported for each segment:\n\n- Thermal Power Generation: ` 1,168.53 crore\n- Renewable Energy: ` 343.89 crore\n- Other Segments: ` 799.55 crore\n\nThese figures are not the same as Consolidated Portfolio Revenue and Adjusted EBITDA.",
     "sources_retrieved": [
       "adani_ar25 p.347",
       "adani_ar25 p.276",
@@ -182,15 +192,16 @@
       "adani_ar25 p.267"
     ],
     "type": "financial",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": false,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": false
   },
   {
     "id": 12,
     "question": "What net debt to EBITDA ratio did the Adani report disclose as of March 31, 2026?",
     "expected_answer": "The report disclosed a net debt/EBITDA ratio of 3.32x, below the guided 3.5x leverage range.",
-    "generated_answer": "Unfortunately, I do not have access to a specific value for the net debt to EBITDA ratio for the Adani Power Limited's report as of March 31, 2026. The text you provided appears to be an excerpt from their annual report, but it does not include this specific financial metric.",
+    "generated_answer": "The question does not provide enough information to calculate the exact Net Debt to EBITDA ratio. However, according to the provided snippet, I can give you an idea of how it could be calculated.\n\nTo find the Net Debt to EBITDA ratio, we need to know the Net Debt and EBITDA values for Adani Power Limited as of March 31, 2026.\n\nFrom the provided snippet, we have the following information:\n\n- Total Debt: ₹1,07,408.68 crore\n- Earnings before Interest and Taxes (EBIT): ₹17,681.44 crore\n\nTo calculate Net Debt to EBITDA ratio:\n\nNet Debt to EBITDA Ratio = Total Debt / EBIT\n= 107408.68 / 176814.4\n= 0.609 \n\nPlease note that the provided information might not be sufficient for accurate calculations and may require additional data or sources for precise determination of this ratio.",
     "sources_retrieved": [
       "adani_ar25 p.274",
       "adani_ar25 p.345",
@@ -199,15 +210,16 @@
       "adani_ar25 p.273"
     ],
     "type": "factual",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": false,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 13,
     "question": "What major airport milestones are mentioned in the Adani report?",
     "expected_answer": "The report mentions the opening of Navi Mumbai International Airport and the new integrated terminal building at Guwahati Airport, both inaugurated by the Prime Minister, with Navi Mumbai operations commencing in December 2025.",
-    "generated_answer": "Based on Source 5, [Source 2 - adani_ar25, page 250], there is a mention of road projects including across 8 airports and one ropeway project. However, no specific major airport milestones are explicitly mentioned.\n\nHowever I could not find the information in other sources.",
+    "generated_answer": "Unfortunately, there is no information provided about major airport milestones in the given sources.",
     "sources_retrieved": [
       "adani_ar25 p.316",
       "adani_ar25 p.250",
@@ -216,15 +228,16 @@
       "adani_ar25 p.12"
     ],
     "type": "operational",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 14,
     "question": "How does the Adani report describe its enterprise risk management framework?",
     "expected_answer": "It describes a structured ERM framework based on ISO 31000:2018 and the COSO framework, used to identify, assess, mitigate, and monitor risks across strategic, tactical, and operational categories, supported by a central risk register and continuous monitoring.",
-    "generated_answer": "The Adani report describes its Enterprise Risk Management (ERM) framework as a structured approach that combines three lines of defense, providing an enterprise-wide view of risks and their aggregated exposure. The ERM framework is implemented across the organization by the Risk Management Office and incorporates best practices based on COSO and ISO 31000 standards. It includes:\n\n1. A risk management report that is submitted to NSE and BSE through web portals.\n2. An Enterprise Risk Management (ERM) framework that provides a structured approach to identify, assess, manage, and monitor risks.\n3. A commitment to deliver sustainable value, which includes obligations and responsibilities of designated persons, including the Company Secretary and Compliance Officer.\n4. A risk assessment monitoring mechanism that is included in the Company's annual internal audit process.\n5. A risk management policy that is implemented by the Risk Management Committee at regular intervals.\n\nThe report also mentions that the ERM framework enables the identification of underlying risks and opportunities, and that it provides a systematic and proactive approach to manage risks, ensuring that they do not negatively impact the company's strategic objectives.",
+    "generated_answer": "The Adani report describes its Enterprise Risk Management (ERM) framework as a structured approach that is implemented across the organization by the Risk Management Office. The framework incorporates best practices based on COSO and ISO 31000 and is tailored to suit the company's unique business requirements.\n\nAccording to the report, the ERM framework provides an integrated and organized approach to risk management, which includes:\n\n* Identifying, analyzing, assessing, mitigating, monitoring, and governing any risk or potential threat\n* Considering primary, secondary, consequential, and residual risks\n* Using a four-point scale to assess the likelihood and impact of emerging risks\n* Prioritizing risks based on their criticality starting with critical risks, followed by high, medium, and low risks\n* Establishing a Risk Management Committee to monitor and review risks periodically\n\nThe report also highlights the importance of context, cadence, and integration in risk management, stating that \"the systematic and proactive approach enables effective resource allocation through structured qualitative and quantitative risk impact assessment\".\n\nOverall, the Adani report presents its ERM framework as a comprehensive and dynamic system for identifying, assessing, and managing risks to ensure resilience and adaptability in uncertain times.",
     "sources_retrieved": [
       "inf_ar25 p.133",
       "adani_ar25 p.188",
@@ -233,15 +246,16 @@
       "tatamotors_ar25 p.41"
     ],
     "type": "narrative",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": false
   },
   {
     "id": 15,
     "question": "What mitigation actions are listed for commodity price risk in the Adani report?",
     "expected_answer": "Mitigations include having over half of installed capacity domestic coal-based, more than 90% of that capacity tied under PPAs, escalation and tariff revision mechanisms for fuel cost recovery, pre-monsoon domestic coal procurement, and captive mine development for long-term fuel security.",
-    "generated_answer": "The question specifically asks about the Adani Power Limited report. The report mentions a few specific mitigation actions related to commodity price risk:\n\n1. Hedging exposure: The Company has hedged 2.58% of its exposure against crude and 3.19% for Distillates.\n\nThese percentages indicate that the company has taken measures to mitigate the risks associated with fluctuations in commodity prices.\n\nPlease note, however, that these are just specific numbers related to commodity price risk and do not constitute a comprehensive list of all mitigation actions taken by the company as a whole.",
+    "generated_answer": "The Adani report lists the following mitigation actions for commodity price risk:\n\n1. Hedging exposure using commodity derivatives\n2. Exposure to crude oil (2.58% of total transactions)\n3. Exposure to distillates (2.09% of total transactions)\n4. Exposure to polymer (3.19% of total transactions)\n5. Exposure to petchem (3.19% of total transactions)\n\nThese actions indicate that Adani Power Limited has implemented various hedging strategies to mitigate its exposure to commodity price risks, including the use of commodity derivatives.",
     "sources_retrieved": [
       "tatamotors_ar25 p.248",
       "rel_ar25 p.165",
@@ -250,15 +264,16 @@
       "rel_ar25 p.72"
     ],
     "type": "risk",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": false,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": false
   },
   {
     "id": 16,
     "question": "What was SBI's standalone net profit in FY2025 and how much did it grow year-on-year?",
     "expected_answer": "SBI's standalone net profit grew 16.08% to ₹70,901 crore in FY2025, compared with ₹61,077 crore in FY2024.",
-    "generated_answer": "The answer to the question is not explicitly stated in the provided sources. The standalone net profit for FY2025 and the year-on-year growth rate are not mentioned in any of the given sources.",
+    "generated_answer": "Unfortunately, the sources do not provide enough information to answer this question. The sources only mention SBI's financial performance for FY2024-25 and provide some details about its subsidiaries, but they do not include standalone net profit figures for FY2025.",
     "sources_retrieved": [
       "sbi_ar25 p.122",
       "sbi_ar25 p.21",
@@ -267,15 +282,16 @@
       "sbi_ar25 p.291"
     ],
     "type": "financial",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 17,
     "question": "What were SBI's gross NPA and net NPA ratios at the end of FY2025?",
     "expected_answer": "SBI's gross NPA ratio was 1.82% and net NPA ratio was 0.47% at the end of FY2025.",
-    "generated_answer": "Unfortunately, I couldn't find any information about SBI's gross NPA and net NPA ratios in the provided sources. The sources only provide financial performance data and other metrics, but do not mention Non-Performing Asset (NPA) ratios.",
+    "generated_answer": "Unfortunately, none of the provided sources contain information about SBI's gross NPA (Non-Performing Asset) and net NPA ratios at the end of FY2025.",
     "sources_retrieved": [
       "sbi_ar25 p.21",
       "sbi_ar25 p.21",
@@ -284,15 +300,16 @@
       "tatamotors_ar25 p.6"
     ],
     "type": "factual",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 18,
     "question": "What dividend did SBI declare for FY2025?",
     "expected_answer": "SBI declared a dividend of ₹15.90 per equity share for the financial year ended March 31, 2025.",
-    "generated_answer": "According to [Source 2 - sbi_ar25, page 21], the Company (SBI) posted a PAT of ₹2,531 Crore for FY2025.",
+    "generated_answer": "According to Source 2 - sbi_ar25, page 21, the amount allocated for CSR activities by the company for FY2024 was ₹2,063 Crore. However, this information does not provide details on the dividend declared for FY2025.\n\nUnfortunately, I do not have enough information from the provided sources (Source 1 to Source 5) to determine what dividend SBI declared for FY2025.",
     "sources_retrieved": [
       "rel_ar25 p.80",
       "sbi_ar25 p.21",
@@ -301,15 +318,16 @@
       "sbi_ar25 p.128"
     ],
     "type": "factual",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": false,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 19,
     "question": "What risks does SBI identify as inherent to banking business in its risk management overview?",
     "expected_answer": "SBI identifies credit risk, market risk, liquidity risk, and operational risk, including IT risk and third-party risk, as major inherent banking risks.",
-    "generated_answer": "According to [Source 2 - sbi_ar25, page 94], SBI identifies the following risks as inherent to the banking business:\n\n1. Credit Risk\n2. Market Risk\n3. Liquidity Risk\n4. Operational Risk\n5. IT Risk\n6. Third-Party Risk",
+    "generated_answer": "According to Source 2 - sbi_ar25, page 91, the bank identifies the following risks as inherent to the banking business:\n\n1. Credit Risk\n2. Market Risk\n3. Liquidity Risk\n4. Operational Risk\n5. IT Risk\n6. Third-party Risk\n\nThese risks are mentioned in the context of the bank's risk management framework and its approach to identifying, measuring, monitoring, and controlling these risks.\n\nIt is also worth noting that Source 4 - sbi_ar25, page 356, mentions that the bank has identified systemic risks, which include Operational Risk, among others.",
     "sources_retrieved": [
       "sbi_ar25 p.342",
       "sbi_ar25 p.94",
@@ -318,15 +336,16 @@
       "sbi_ar25 p.400"
     ],
     "type": "risk",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": true,
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 20,
     "question": "What initiatives does SBI describe for cyber fraud awareness and customer protection?",
     "expected_answer": "SBI describes customer onboarding cyber-risk communication, flyers and leaflets on cybercrime and safe practices, media campaigns, reporting guidance through helpline 1930 and cybercrime.gov.in, the 'Fight Against Cyber Frauds' awareness programme, cyber safety displays at branches, videos on digital displays, and special townhall meetings at 158 cyber fraud propensity branches.",
-    "generated_answer": "According to Source 4 - sbi_ar25, page 92:\n\n* The Bank has introduced a QR code-based feedback system at all branches and cells.\n* This allows both branches and customers to instantly share their feedback on cyber security and prevent digital frauds.\n* The \"Go Secure, Go Digital\" awareness campaign was conducted on November 26, 2024, at 526 regional business offices across Circles.\n* The Townhall Meetings aim to educate customers on banking services, cyber security, and safe transaction practices.\n* The Bank regularly conducts staff training meetings to educate staff members on banking services and cyber security.\n\nAdditionally, Source 5 - sbi_ar25, page 501 mentions:\n\n* The Bank has a comprehensive set of policies and plans to strengthen its cybersecurity framework.\n* An Apex-Level Data Governance Council (ADGC) oversees the entire framework to ensure effective data governance.\n* A comprehensive privacy policy is in place, which extends to suppliers, and relevant SOPs and guidelines have been operationalized to achieve the Bank's privacy objectives.\n\nLastly, Source 4 - sbi_ar25, page 90 mentions:\n\n* An awareness programme on \"Fight Against Cyber Frauds\" was conducted to educate individual customers and employees.\n* A list of 10 common tricks used by scammers is displayed along with a list of Do's and Don'ts for safety against cyber frauds.\n\nThese initiatives demonstrate SBI's efforts to raise customer awareness about cyber risks, provide education on safe transaction practices, and implement measures to protect customers from cyber frauds.",
+    "generated_answer": "According to Source 4 - sbi_ar25, page 501 and Source 5 - sbi_ar25, page 92, the initiatives described by SBI for cyber fraud awareness and customer protection are:\n\n1. Introduction of a QR code-based feedback system at all branches and cells to enhance feedback collection and display of \"Do's and Don'ts\" for cyber safety on standees.\n2. Conducting Townhall Meetings (26.11.2024) to educate customers on banking services, cyber security, and safe digital transaction practices.\n3. Launching the “Fight Against Cyber Frauds” programme in November 2024 across 110 Regions in 13 Circles.\n4. Display of awareness videos on cyber security at public places, such as Regional Business offices across Circles, to educate customers about cyber risk and reporting mechanism during customer onboarding.\n5. Leveraging social media posts for customer awareness and sensitization regarding cyber frauds and cyber security.\n\nThese initiatives aim to educate customers on how to safeguard themselves against online fraud and promote a proactive approach to customer engagement.",
     "sources_retrieved": [
       "sbi_ar25 p.26",
       "sbi_ar25 p.90",
@@ -335,15 +354,16 @@
       "sbi_ar25 p.501"
     ],
     "type": "narrative",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 21,
     "question": "What were Infosys' revenues and net profit in FY 2026?",
     "expected_answer": "Infosys reported revenues of ₹1,78,650 crore and net profit attributable to owners of ₹29,440 crore in FY 2026.",
-    "generated_answer": "Unfortunately, the provided sources do not contain information on Infosys' revenues and net profit for FY 2026. The sources provide information on various aspects of Infosys' financial performance, such as cost of fulfillment (Source 2) and CSR expenditures (Source 3), but no specific data on revenues or net profit is mentioned.\n\nTherefore, I cannot provide the requested answer based on the available information in the sources.",
+    "generated_answer": "I don't have enough information from the provided sources to determine Infosys' revenues and net profit for FY 2026. The sources only provide information on various financial metrics, such as cost of fulfillment (Source 2), corporate social responsibility (Source 3), and statutory reports (Source 4), but do not specify revenue or net profit figures for FY 2026.",
     "sources_retrieved": [
       "inf_ar25 p.262",
       "inf_ar25 p.233",
@@ -352,15 +372,16 @@
       "inf_ar25 p.87"
     ],
     "type": "financial",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 22,
     "question": "What total dividend per share did Infosys announce for fiscal 2026?",
     "expected_answer": "Infosys announced a total dividend of ₹48 per share for fiscal 2026, made up of an interim dividend of ₹23 and a final dividend of ₹25 per share.",
-    "generated_answer": "According to Source [Source 1 - inf_ar25, page 120], the total dividend per share for fiscal 2026 is:\n\n* Interim dividend of `23.00\n* Final dividend of `48.00\n\nTherefore, the total dividend per share for fiscal 2026 is not explicitly stated as a single amount in Source [Source 1]. However, we can calculate it by adding the interim and final dividend amounts.\n\nInterim dividend: `23.00\nFinal dividend: `48.00\nTotal dividend: `23.00 + `48.00 = `71.00\n\nSo, Infosys announced a total dividend of `71.00 per share for fiscal 2026.\n\nAlternatively, we can confirm this by checking Source [Source 2 - inf_ar25, page 37], which states:\n\n\"including Tier-I capital, capital adequacy ratio, credit rating, interim dividend of `23 per equity share and announced a final profitability, Non Performing Asset (NPA) levels and deposit base dividend of `25 per share...\"\n\nSource [Source 5 - inf_ar25, page 262] does not provide any additional information on the total dividend amount.",
+    "generated_answer": "According to [Source 2 - inf_ar25, page 37], the Company announced a final profitability and Non Performing Asset (NPA) levels and deposit base dividend of `25 per equity share, subject to shareholders' approval.",
     "sources_retrieved": [
       "inf_ar25 p.120",
       "inf_ar25 p.37",
@@ -369,15 +390,16 @@
       "inf_ar25 p.262"
     ],
     "type": "factual",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 23,
     "question": "How many employees and active clients did Infosys report as of FY 2026?",
     "expected_answer": "Infosys reported 3,28,594 total employees and 1,965 total active clients.",
-    "generated_answer": "I can answer the question based on the provided sources.\n\nUnfortunately, I couldn't find any information in the sources regarding the number of active clients reported by Infosys as of FY 2026. \n\nHowever, according to Source 4 (page 144), the total number of permanent employees is mentioned:\n\n\"Permanent employees: 13.2% male, 11.6% female, and 12.6% total.\"\n\nSimilarly, Source 4 also mentions that for permanent workers:\n\n\"Turnover rate in fiscal 2026 (In %): Male Female Total Male Female Total\"\n\nThe numbers for turnover rates are as follows:\n\n- FY 2026: Male = 13.2%, Female = 11.6%, Total = 12.6%\n- FY 2025: Male = 14.5%, Female = 13.6%, Total = 12.6%\n- FY 2024: Male = 14.1%, Female = 14.1%, Total = 12.6%\n\nThere is no information available on the number of active clients in the provided sources.",
+    "generated_answer": "I couldn't find any information in the provided sources regarding the number of employees or active clients that Infosys reported as of FY 2026. \n\nThe turnover rate for permanent employees and workers is mentioned, but it doesn't provide a total number of employees (Source 4). Similarly, the number of board members, key management personnel, and holding/subsidiary/associate companies are also provided, but they do not indicate the overall number of employees or active clients. \n\nTherefore, I couldn't answer the question with certainty based on the information provided in the sources.",
     "sources_retrieved": [
       "inf_ar25 p.33",
       "inf_ar25 p.85",
@@ -386,15 +408,16 @@
       "inf_ar25 p.87"
     ],
     "type": "factual",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": false,
+    "model_declined_to_answer": true
   },
   {
     "id": 24,
     "question": "What cybersecurity governance and controls does Infosys describe?",
     "expected_answer": "Infosys has a Cybersecurity Risk Sub-Committee of the Risk Management Committee made up only of independent directors. It monitors global cybersecurity events, maintains ISO 27001:2022 certification, has SSAE 18 and ISAE 3402 SOC 1 and SOC 2 attestations, and focuses on workforce training, AI/ML security, cyber resiliency, secure supply chains, and developer security resources.",
-    "generated_answer": "According to [Source 5 - inf_ar25, page 193], Infosys describes the following cybersecurity governance and controls:\n\n1. A holistic and comprehensive cybersecurity framework - SEED - aligned to NIST’s CyberSecurity Framework (CSF) and supported by supplementary policies, processes, procedures, and standards.\n2. A Data Privacy Policy published on the Company's intranet, demonstrating the Management's commitment to data privacy across all Infosys operations.\n3. Providing privacy notices at the data collection point for internal and external data subjects.\n4. Regular review and strengthening of cybersecurity processes and controls across its entire network in line with industry best practices.\n\nAdditionally, [Source 4 - inf_ar25, page 112] mentions that Infosys has a Cybersecurity Risk Sub-committee report for the year ended March 31, 2026, which includes:\n\n1. Reviewing security awareness initiatives.\n2. Reviewing access control for SaaS applications.\n3. Progress of tech stack modernization and deployment.\n4. Cloud security governance.\n5. External threat landscape and environment.\n6. Emerging threats.\n7. Vulnerability management.\n8. Incident metrics.\n9. Global ransomware attacks and Infosys' preparedness, including crisis management and scenario analysis.\n\n[Source 3 - inf_ar25, page 184] also mentions that Infosys has a framework for public policy positions advocated by the Company, which includes:\n\n1. Engaging ecosystems at the national, regional, and local levels.\n2. Developing and maintaining partnerships with relevant government officials, business organizations, technology industry associations, educational institutions, and community organizations.\n3. Meetings and submissions to the EU Commission, Council, and other regulatory bodies.\n\nIt is worth noting that [Source 1 - inf_ar25, page 148] mentions cybersecurity-related risks, including cyber-attacks, data privacy information network and/or failure processes, policies, and controls, as well as evolving regulatory compliance and public scrutiny. However, it does not provide specific details on cybersecurity governance and controls.\n\nIt is also mentioned in [Source 2 - inf_ar25, page 149] that Infosys has an opportunity to increase revenue from cybersecurity service offerings and recognized solutions breach threats to Infosys as an industry leader in advanced cybersecurity information solutions and adoption of leading data privacy standards.",
+    "generated_answer": "According to [Source 5 - inf_ar25, page 193], Infosys has a holistic and comprehensive cybersecurity framework – SEED - aligned to NIST's CyberSecurity Framework (CSF) and supported by supplementary policies, processes, procedures, and standards to achieve and sustain enterprise-level information security objectives.\n\nAdditionally, Infosys mentions the following cybersecurity governance and controls:\n\n- A Data Privacy Policy published on the Company's intranet\n- Regular review and strengthening of its cybersecurity processes and controls across its entire network in line with industry best practices\n- Close collaboration with cyber intelligence and forensic consultants to identify and prepare for emerging cybersecurity threats\n- Training programs for employees on security by design\n- Strong encryption, data backup, and recovery mechanism to ensure business continuity during any crisis\n- Cyber Risk Assessment Framework aligned to ISO 31000, ISO 27001, and ISO 27005",
     "sources_retrieved": [
       "inf_ar25 p.148",
       "inf_ar25 p.149",
@@ -403,15 +426,16 @@
       "inf_ar25 p.193"
     ],
     "type": "narrative",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": true,
+    "citation_correct": true,
+    "model_declined_to_answer": false
   },
   {
     "id": 25,
     "question": "What does Infosys report about the McCamish cybersecurity incident?",
     "expected_answer": "Infosys reports that in November 2023 certain systems of Infosys McCamish Systems LLC were encrypted by ransomware, causing non-availability of some applications and systems. McCamish initiated incident response, engaged cybersecurity specialists, substantially remediated and restored affected systems by December 31, 2023, and identified corporate customers and individuals whose information was subject to unauthorized access and exfiltration.",
-    "generated_answer": "According to [Source 1 - inf_ar25, page 345], Infosys reports that an incident at McCamish occurred on November 3, 2023, which may or may not have been a cybersecurity occurrence. The incident's existence and nature are uncertain.\n\nNo further information is provided in the sources about the details of the incident itself, but rather highlights the consolidated obligation arising from past events that is not recognized as a class action complaint because it is not probable that an outflow of resources will be required to settle the incident.",
+    "generated_answer": "According to Source 1 - inf_ar25, page 345, the actions arise out of the cybersecurity occurrence or non-occurrence of one or more uncertain future incident at McCamish initially disclosed on November 3, 2023. The consolidated obligation that arises from past events but is not recognized as a class action complaint was filed on November 7, 2024. However, the report does not provide details about the nature and impact of the McCamish cybersecurity incident itself.\n\nTherefore, according to the information provided in the sources, Infosys reports that a cybersecurity incident occurred at McCamish, but it does not provide further details about the incident's nature or impact.",
     "sources_retrieved": [
       "inf_ar25 p.345",
       "inf_ar25 p.85",
@@ -420,8 +444,9 @@
       "inf_ar25 p.112"
     ],
     "type": "risk",
-    "retrieval_correct": null,
-    "answer_correct": null,
-    "citation_correct": null
+    "retrieval_correct": true,
+    "answer_correct": false,
+    "citation_correct": true,
+    "model_declined_to_answer": true
   }
 ]
