@@ -1,0 +1,229 @@
+[
+  {
+    "id": 1,
+    "question": "What is Reliance's current stock price?",
+    "type": "single_tool_live_data",
+    "expected_tools": [
+      "get_live_price"
+    ],
+    "tools_called": [
+      "get_live_price"
+    ],
+    "full_trace": [
+      {
+        "tool": "get_live_price",
+        "args": {
+          "company_key": "rel_ar25"
+        }
+      }
+    ],
+    "generated_answer": "Reliance Industries' current stock price is ₹ 1327.2 per share.",
+    "correct_tools_used": true,
+    "answer_correct": true,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": false
+  },
+  {
+    "id": 2,
+    "question": "What risks does SBI face related to cyber fraud?",
+    "type": "single_tool_narrative",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "tools_called": [
+      "search_documents"
+    ],
+    "full_trace": [
+      {
+        "tool": "search_documents",
+        "args": {
+          "company_key": "sbi_ar25",
+          "query": "SBI cyber fraud risks"
+        }
+      }
+    ],
+    "generated_answer": "Based on the search documents, SBI faces risks related to cyber fraud due to regulatory non-compliance with data protection regulations and the potential for unauthorized access to customer data. The bank has implemented policies and procedures to protect customer data, including a Cyber Security Policy and regular employee training on cybersecurity. However, there is a risk of customer distrust if data breaches occur, which could impact customer retention.\n\nIt's also mentioned that SBI has a robust cybersecurity framework in place to safeguard customer data, adhering to data protection regulations and conducting periodic internal and third-party audits to ensure compliance with Privacy Policy and uphold the highest standards of data protection.\n\nTo mitigate this risk, SBI focuses on leveraging cutting-edge technology and innovative solutions to deliver seamless and efficient banking experiences, enhancing customer experience, and fostering a culture of constant digital evolution.",
+    "correct_tools_used": true,
+    "answer_correct": false,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": false
+  },
+  {
+    "id": 3,
+    "question": "What was Infosys's FY26 revenue according to their fiscal year data?",
+    "type": "single_tool_financial",
+    "expected_tools": [
+      "get_financial_metrics"
+    ],
+    "tools_called": [
+      "get_financial_metrics"
+    ],
+    "full_trace": [
+      {
+        "tool": "get_financial_metrics",
+        "args": {
+          "fiscal_year": "2026-03-31",
+          "company_key": "inf_ar25"
+        }
+      }
+    ],
+    "generated_answer": "Infosys's FY26 revenue was ₹20,158 crores.",
+    "correct_tools_used": true,
+    "answer_correct": true,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": false
+  },
+  {
+    "id": 4,
+    "question": "Calculate the YoY revenue growth for Tata Motors between FY25 and FY26 using exact figures.",
+    "type": "multi_tool_calculation",
+    "expected_tools": [
+      "get_financial_metrics",
+      "get_financial_metrics",
+      "calculate_yoy_growth"
+    ],
+    "tools_called": [
+      "get_financial_metrics",
+      "get_financial_metrics",
+      "calculate_yoy_growth"
+    ],
+    "full_trace": [
+      {
+        "tool": "get_financial_metrics",
+        "args": {
+          "fiscal_year": "2025-03-31",
+          "company_key": "tatamotors_ar25"
+        }
+      },
+      {
+        "tool": "get_financial_metrics",
+        "args": {
+          "company_key": "tatamotors_ar25",
+          "fiscal_year": "2026-03-31"
+        }
+      },
+      {
+        "tool": "calculate_yoy_growth",
+        "args": {
+          "metric_name": "revenue",
+          "year": "2",
+          "current_value": "null",
+          "previous_value": "null"
+        }
+      }
+    ],
+    "generated_answer": "To find the YoY revenue growth for Tata Motors between FY25 and FY26, we can use the financial data tool to fetch the total revenue for both years and then calculate the percentage change.\n\nFirst, let's get the total revenue for FY25:\n{\"name\": \"get_financial_metrics\", \"parameters\": {\"company_key\":\"tatamotors_ar25\",\"fiscal_year\":\"2025-03-31\"}}",
+    "correct_tools_used": false,
+    "answer_correct": false,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": false
+  },
+  {
+    "id": 5,
+    "question": "What is Adani's P/E ratio using their current price and latest EPS?",
+    "type": "multi_tool_calculation",
+    "expected_tools": [
+      "get_live_price",
+      "get_financial_metrics",
+      "calculate_pe_ratio"
+    ],
+    "tools_called": [
+      "get_financial_metrics",
+      "calculate_pe_ratio"
+    ],
+    "full_trace": [
+      {
+        "tool": "get_financial_metrics",
+        "args": {
+          "fiscal_year": "",
+          "company_key": "adani_ar25"
+        }
+      },
+      {
+        "tool": "calculate_pe_ratio",
+        "args": {
+          "eps": "[[]]",
+          "price": "[]"
+        }
+      }
+    ],
+    "generated_answer": "It seems like the EPS value is not available in the retrieved data. The P/E ratio calculation requires both the current price and EPS values.\n\nCould you please provide me with the latest price of Adani's stock or ensure that the EPS value is available in the retrieved data? I'll be happy to assist you once I have the necessary information.",
+    "correct_tools_used": false,
+    "answer_correct": false,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": false
+  },
+  {
+    "id": 6,
+    "question": "What is Tata Motors' growth strategy according to their annual report?",
+    "type": "single_tool_narrative",
+    "expected_tools": [
+      "search_documents"
+    ],
+    "tools_called": [
+      "search_documents"
+    ],
+    "full_trace": [
+      {
+        "tool": "search_documents",
+        "args": {
+          "company_key": "tatamotors_ar25",
+          "query": "Tata Motors annual report growth strategy"
+        }
+      }
+    ],
+    "generated_answer": "Based on the search documents provided, Tata Motors' growth strategy includes:\n\n* Expanding horizons through strategic investments and acquisitions\n* Building a world-class commercial vehicles enterprise with strong leadership and a significant presence globally\n* Focusing on product interventions to address market trends and customer needs\n* Delivering robust sales volumes and profit margins in a challenging economic environment\n* Investing in research and development to stay ahead of the competition\n* Emphasizing sustainability and social responsibility through initiatives such as renewable energy and community resilience programs.\n\nThese strategies are mentioned in Tata Motors' 2nd Integrated Annual Report 2025-26, which provides an overview of the company's financial performance, operational results, and corporate governance practices.",
+    "correct_tools_used": true,
+    "answer_correct": false,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": true
+  },
+  {
+    "id": 7,
+    "question": "What is SBI's net profit margin for FY26?",
+    "type": "multi_tool_calculation",
+    "expected_tools": [
+      "get_financial_metrics",
+      "calculate_profit_margin"
+    ],
+    "tools_called": [
+      "get_financial_metrics"
+    ],
+    "full_trace": [
+      {
+        "tool": "get_financial_metrics",
+        "args": {
+          "company_key": "sbi_ar25",
+          "fiscal_year": "2026-03-31"
+        }
+      }
+    ],
+    "generated_answer": "SBI's net profit margin for FY26 is 219.6% (calculated using the 'diluted_eps' value). \n\nSource: financial data tool, Yahoo Finance annual income statement.",
+    "correct_tools_used": false,
+    "answer_correct": false,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": true
+  },
+  {
+    "id": 8,
+    "question": "What is the exchange rate of the Indian Rupee to Japanese Yen today?",
+    "type": "trap_out_of_scope",
+    "expected_tools": [],
+    "tools_called": [
+      "get_live_price"
+    ],
+    "full_trace": [
+      {
+        "tool": "get_live_price",
+        "args": {
+          "company_key": "inf_ar25"
+        }
+      }
+    ],
+    "generated_answer": "I don't have the information to provide you with the exchange rate of the Indian Rupee to Japanese Yen today. The tool call I made earlier only provided information about the current price of Infy Limited (INFY.NS) stock, not currency exchange rates.\n\nTo get the latest exchange rate, I recommend checking a reliable source such as XE.com or Bloomberg for the most up-to-date foreign exchange rates.",
+    "correct_tools_used": false,
+    "answer_correct": true,
+    "unnecessary_duplicate_calls": false,
+    "unsupported_claims_present": false
+  }
+]

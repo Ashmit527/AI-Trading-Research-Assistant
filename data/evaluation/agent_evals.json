@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "question": "What is Reliance's current stock price?",
+    "expected_tools": ["get_live_price"],
+    "type": "single_tool_live_data"
+  },
+  {
+    "id": 2,
+    "question": "What risks does SBI face related to cyber fraud?",
+    "expected_tools": ["search_documents"],
+    "type": "single_tool_narrative"
+  },
+  {
+    "id": 3,
+    "question": "What was Infosys's FY26 revenue according to their fiscal year data?",
+    "expected_tools": ["get_financial_metrics"],
+    "type": "single_tool_financial"
+  },
+  {
+    "id": 4,
+    "question": "Calculate the YoY revenue growth for Tata Motors between FY25 and FY26 using exact figures.",
+    "expected_tools": ["get_financial_metrics", "get_financial_metrics", "calculate_yoy_growth"],
+    "type": "multi_tool_calculation"
+  },
+  {
+    "id": 5,
+    "question": "What is Adani's P/E ratio using their current price and latest EPS?",
+    "expected_tools": ["get_live_price", "get_financial_metrics", "calculate_pe_ratio"],
+    "type": "multi_tool_calculation"
+  },
+  {
+    "id": 6,
+    "question": "What is Tata Motors' growth strategy according to their annual report?",
+    "expected_tools": ["search_documents"],
+    "type": "single_tool_narrative"
+  },
+  {
+    "id": 7,
+    "question": "What is SBI's net profit margin for FY26?",
+    "expected_tools": ["get_financial_metrics", "calculate_profit_margin"],
+    "type": "multi_tool_calculation"
+  },
+  {
+    "id": 8,
+    "question": "What is the exchange rate of the Indian Rupee to Japanese Yen today?",
+    "expected_tools": [],
+    "type": "trap_out_of_scope"
+  }
+]
