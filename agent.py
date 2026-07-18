@@ -1,153 +1,128 @@
 import ollama
 import json
+import re
 
 from tools_document_search import search_documents
 from tools_live_data import get_live_price, get_ttm_metrics, get_financial_metrics
-from tools_calculator import (
-    calculate_pe_ratio, calculate_yoy_growth, calculate_profit_margin,
-    calculate_debt_to_equity, calculate_roe, calculate_roa,
-    calculate_ebitda_margin, calculate_cagr, calculate_interest_coverage,
-    calculate_dividend_yield
+from tools_calculator import calculate_pe_ratio, calculate_yoy_growth, calculate_profit_margin
+from tool_schema import TOOLS, COMPANY_KEYS
+from tool_sanitizer import (
+    sanitize_tool_args, EXPECTED_PARAMS, extract_numeric_values,
+    verify_calculator_grounding
 )
 
-COMPANY_KEYS = ["adani_ar25", "inf_ar25", "rel_ar25", "sbi_ar25", "tatamotors_ar25"]
+MODEL_NAME = "finance-agent"  # custom model built from Modelfile (qwen2.5:7b based)
 
-# --- Tool definitions in Ollama's expected schema ---
-TOOLS = [
-    {
-        "type": "function",
-        "function": {
-            "name": "search_documents",
-            "description": "Search annual report filings for qualitative information - risk factors, strategy, management commentary, business descriptions. NOT for precise numbers (use financial data tools instead).",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "query": {"type": "string", "description": "The search question"},
-                    "company_key": {"type": "string", "description": f"Optional - one of {COMPANY_KEYS}, to filter to one company"},
-                },
-                "required": ["query"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "get_live_price",
-            "description": "Get current stock price and market data for a company.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "company_key": {"type": "string", "description": f"One of {COMPANY_KEYS}"},
-                },
-                "required": ["company_key"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "get_financial_metrics",
-            "description": "Get exact fiscal-year financial figures (revenue, EBITDA, net income, EPS) for a company. Use for questions mentioning a specific fiscal year like 'FY26'.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "company_key": {"type": "string", "description": f"One of {COMPANY_KEYS}"},
-                    "fiscal_year": {"type": "string", "description": "Exact format 'YYYY-MM-DD' only, e.g. '2026-03-31' for FY26, '2025-03-31' for FY25. Omit entirely if unsure or asking about the most recent year."},
-                },
-                "required": ["company_key"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "calculate_pe_ratio",
-            "description": "Calculate Price-to-Earnings ratio given price and EPS.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "price": {"type": "number"},
-                    "eps": {"type": "number"},
-                },
-                "required": ["price", "eps"]
-            }
-        }
-    },
-    {
-        "type": "function",
-        "function": {
-            "name": "calculate_yoy_growth",
-            "description": "Calculate year-over-year growth percentage between two values.",
-            "parameters": {
-                "type": "object",
-                "properties": {
-                    "current_value": {"type": "number"},
-                    "previous_value": {"type": "number"},
-                    "metric_name": {"type": "string"},
-                },
-                "required": ["current_value", "previous_value"]
-            }
-        }
-    },
-]
-
-# Map tool names (strings) to actual Python functions
 TOOL_FUNCTIONS = {
     "search_documents": search_documents,
     "get_live_price": get_live_price,
     "get_financial_metrics": get_financial_metrics,
     "calculate_pe_ratio": calculate_pe_ratio,
     "calculate_yoy_growth": calculate_yoy_growth,
+    "calculate_profit_margin": calculate_profit_margin,
 }
-def run_agent(user_question: str, max_steps: int = 5) -> str:
-    messages = [
-        {
-            "role": "system",
-            "content": f"""You are a financial research assistant for NSE-listed companies.
-Available companies: {COMPANY_KEYS}.
-Tool usage rules:
-- For qualitative questions (risk, strategy, commentary), use search_documents.
-- For numeric/financial questions (price, revenue, ratios), use the financial data tools.
-- For fiscal_year parameters, use EXACT format 'YYYY-MM-DD' (e.g. '2026-03-31'). Omit if unsure - it defaults to the most recent year.
-- For ANY calculation (growth, ratios, margins), you MUST use the calculator tools - never compute or state a percentage/ratio yourself, even if you see a similar figure in retrieved text. Always verify with the calculator tool.
-- For growth/comparison questions, fetch BOTH periods' data with separate tool calls BEFORE attempting any calculation. Never call a calculator tool with missing or placeholder values.
-- Do not invent explanations, formulas, or reasoning not directly supported by tool results or retrieved documents.
-- If no available tool can answer the question, say so clearly rather than guessing.
-- Always state which tool/source your information came from.
-"""
-        },
-        {"role": "user", "content": user_question}
-    ]
 
+FAKE_TOOL_CALL_MARKERS = [
+    r'"name"\s*:\s*"',
+    r'"parameters"\s*:',
+    r'\{"name":',
+    r'tool call[s]?:',
+]
+
+
+def looks_like_fake_tool_call(text: str) -> bool:
+    if not text:
+        return False
+    return any(re.search(pattern, text, re.IGNORECASE) for pattern in FAKE_TOOL_CALL_MARKERS)
+
+
+def run_agent(user_question: str, max_steps: int = 8) -> tuple:
+    """Returns (final_answer, tool_call_trace)."""
+    messages = [{"role": "user", "content": user_question}]
     trace = []
+    nudge_count = 0
+    max_nudges = 2
+
+    # Pool of every real numeric value returned by any tool so far this run -
+    # used to verify calculator inputs are actually grounded, not fabricated
+    retrieved_values = set()
 
     for step in range(max_steps):
-        response = ollama.chat(model='llama3.2:3b', messages=messages, tools=TOOLS)
+        response = ollama.chat(model=MODEL_NAME, messages=messages, tools=TOOLS)
         message = response['message']
         messages.append(message)
 
         if not message.get('tool_calls'):
-            return message['content'], trace
+            content = message.get('content', '')
+            if looks_like_fake_tool_call(content) and nudge_count < max_nudges:
+                nudge_count += 1
+                trace.append({"event": "fake_tool_call_detected", "content_snippet": content[:200]})
+                messages.append({
+                    "role": "user",
+                    "content": "Do not write tool calls as text. Use the actual function-calling mechanism to call the tool now, with real values only."
+                })
+                continue
+
+            return content, trace
 
         for tool_call in message['tool_calls']:
             func_name = tool_call['function']['name']
             func_args = tool_call['function']['arguments']
-            trace.append({"tool": func_name, "args": func_args})
+            trace.append({"tool": func_name, "raw_args": func_args})
 
             if func_name not in TOOL_FUNCTIONS:
                 result = {"error": f"Unknown tool: {func_name}"}
             else:
-                try:
-                    result = TOOL_FUNCTIONS[func_name](**func_args)
-                except Exception as e:
-                    result = {"error": f"Tool execution failed: {str(e)}"}
+                expected = EXPECTED_PARAMS.get(func_name, set(func_args.keys()))
+                sanitized = sanitize_tool_args(func_name, func_args, expected)
 
-            messages.append({"role": "tool", "content": json.dumps(result, default=str)})
+                if sanitized["error"]:
+                    result = {"error": sanitized["error"]}
+                else:
+                    # NEW: grounding check - block calculator calls whose
+                    # numbers don't match anything actually retrieved yet
+                    grounding_error = verify_calculator_grounding(
+                        func_name, sanitized["clean_args"], retrieved_values
+                    )
+                    if grounding_error:
+                        result = {"error": grounding_error}
+                        trace[-1]["blocked_ungrounded"] = True
+                    else:
+                        try:
+                            result = TOOL_FUNCTIONS[func_name](**sanitized["clean_args"])
+                        except Exception as e:
+                            result = {"error": f"Tool execution failed: {str(e)}"}
+
+            trace[-1]["result"] = result
+
+            # Add any real numbers this result contained to our grounding pool
+            # (only from non-error, non-calculator results - i.e. actual data fetches)
+            if func_name not in {"calculate_pe_ratio", "calculate_yoy_growth", "calculate_profit_margin"} \
+               and isinstance(result, dict) and not result.get("error"):
+                retrieved_values.update(extract_numeric_values(result))
+
+            messages.append({
+                "role": "tool",
+                "content": json.dumps(result, default=str)
+            })
 
     return "Agent reached max steps without a final answer.", trace
 
+
 if __name__ == "__main__":
-    question = "What was Tata Motors' revenue in FY26 and how does that compare to what they reported in their annual report?"
-    print(f"QUESTION: {question}\n")
-    answer = run_agent(question)
-    print(f"\nFINAL ANSWER:\n{answer}")
+    test_questions = [
+        "What is SBI's net profit margin for FY26?",
+        "Calculate the YoY revenue growth for Tata Motors between FY25 and FY26 using exact figures.",
+        "What is Adani's P/E ratio using their current price and latest EPS?",
+    ]
+
+    for q in test_questions:
+        print(f"\n{'='*60}\nQUESTION: {q}\n{'='*60}")
+        answer, trace = run_agent(q)
+        for t in trace:
+            if "event" in t:
+                print(f"  [NUDGE TRIGGERED] {t['content_snippet']}")
+            else:
+                blocked = " [BLOCKED - UNGROUNDED]" if t.get("blocked_ungrounded") else ""
+                print(f"  [{t['tool']}]{blocked} args={t['raw_args']} -> result={t['result']}")
+        print(f"\nFINAL ANSWER:\n{answer}")
