@@ -19,6 +19,7 @@ data/extracted_text/
 data/chunks/
 data/faiss_index.bin
 data/chunk_metadata.pkl
+logs/
 *.faiss
 *.index
 
